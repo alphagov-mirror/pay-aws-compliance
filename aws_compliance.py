@@ -222,7 +222,7 @@ def reboots_required():
     failReason = ""
     offenders = []
     control = "reboots_required"
-    description = "Instances requiring a reboot, see /var/log/pay-reboots-required.log on instances"
+    description = "Instances requiring a reboot, see /var/log/pay-reboots-required.log on instances. See guidance https://pay-team-manual.cloudapps.digital/manual/suppor"
     scored = False
     filters = [{'Name':'tag:reboots_required', 'Values':['true']}]
     reservations = EC2_CLIENT.describe_instances(Filters=filters).get('Reservations', [])
